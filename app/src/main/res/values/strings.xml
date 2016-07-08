@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">饭否精选</string>
+    <string name="activity_details">消息内容</string>
+    <string name="about">关于</string>
+    <string name="share">分享</string>
+    <string name="share_to">分享至</string>
+    <string name="copy_to_clipboard">复制至剪贴板</string>
+    <string name="version">版本:V1.0</string>
+    <string name="rate">为饭否精选App评分</string>
+    <string name="rate_description">如果你喜欢饭否精选App,请在商店中给它一个好评吧</string>
+    <string name="author">开发者</string>
+    <string name="author_name">黎赵太郎</string>
+    <string name="author_description">湖南，长沙</string>
+    <string name="follow_me_on_github">在GitHub关注我</string>
+    <string name="support">支持</string>
+    <string name="feedback">反馈Bug / 建议</string>
+    <string name="feedback_description">帮助我改进饭否精选App</string>
+    <string name="donate">捐赠</string>
+    <string name="donate_description">如果你认同我的工作，可以向我捐赠，支持我的开发</string>
+    <string name="no_app_market">没有安装应用市场</string>
+    <string name="no_mail_app">没有安装邮件客户端</string>
+    <string name="send_to">mailto:marktonymengyi@gmail.com</string>
+    <string name="mail_subject">饭否精选反馈与建议</string>
+    <string name="sdk_version">SDK:</string>
+    <string name="donate_message">支付宝账号将会复制到粘贴板，进入支付宝可直接粘贴完成捐赠，感谢您的支持！</string>
+    <string name="github_url">https://github.com/marktony</string>
+    <string name="ali_pay_account">marktonymengyi@gmail.com</string>
+</resources>

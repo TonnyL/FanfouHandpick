@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/share"
+        android:orderInCategory="99"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_copy_to_clipboard"
+        android:title="@string/copy_to_clipboard"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>
