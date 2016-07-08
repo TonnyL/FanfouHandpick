@@ -1,10 +1,17 @@
 <resources>
     <string name="app_name">饭否精选</string>
+
     <string name="activity_details">消息内容</string>
+
     <string name="about">关于</string>
+
+    <string name="negative">取消</string>
+    <string name="positive">确定</string>
+
     <string name="share">分享</string>
     <string name="share_to">分享至</string>
     <string name="copy_to_clipboard">复制至剪贴板</string>
+
     <string name="version">版本:V1.0</string>
     <string name="rate">为饭否精选App评分</string>
     <string name="rate_description">如果你喜欢饭否精选App,请在商店中给它一个好评吧</string>
@@ -25,4 +32,5 @@
     <string name="donate_message">支付宝账号将会复制到粘贴板，进入支付宝可直接粘贴完成捐赠，感谢您的支持！</string>
     <string name="github_url">https://github.com/marktony</string>
     <string name="ali_pay_account">marktonymengyi@gmail.com</string>
+
 </resources>

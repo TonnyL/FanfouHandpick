@@ -59,11 +59,11 @@ class AboutActivity : AppCompatActivity() {
             val dialog = AlertDialog.Builder(this@AboutActivity).create()
             dialog.setTitle(R.string.donate)
             dialog.setMessage(getString(R.string.donate_message))
-            dialog.setButton(AlertDialog.BUTTON_NEGATIVE,"CANCEL",
+            dialog.setButton(AlertDialog.BUTTON_NEGATIVE,getString(R.string.negative),
                     { dialogInterface, i ->
 
                     })
-            dialog.setButton(AlertDialog.BUTTON_POSITIVE,"OK",
+            dialog.setButton(AlertDialog.BUTTON_POSITIVE,getString(R.string.positive),
                     {dialogInterface,i ->
                         val manager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                         val data: ClipData = ClipData.newPlainText("text",getString(R.string.ali_pay_account))
