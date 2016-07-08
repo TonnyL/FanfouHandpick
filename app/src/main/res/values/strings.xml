@@ -11,6 +11,8 @@
     <string name="share">分享</string>
     <string name="share_to">分享至</string>
     <string name="copy_to_clipboard">复制至剪贴板</string>
+    <string name="copy_to_clipboard_ok">已复制到剪贴板</string>
+    <string name="load_failed">加载失败了</string>
 
     <string name="version">版本:V1.0</string>
     <string name="rate">为饭否精选App评分</string>

@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     private var rvMain: RecyclerView? = null
     private var adapter: FanfouPostAdapter? = null
     private var postsList = ArrayList<FanfouPost>()
+
+    private var TAG: String = "MainActivity"
 
     private var y: Int = 2015
     private var m: Int = 9
@@ -190,14 +193,23 @@ class MainActivity : AppCompatActivity() {
             }
 
         }, Response.ErrorListener {
+
             // show error through snack bar
-            Snackbar.make(fab!!,"Error", Snackbar.LENGTH_SHORT).show()
+            val snackbar = Snackbar.make(fab!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
+            snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+            val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
+            textView.setTextColor(getColor(R.color.colorAccent))
+            snackbar.show()
+
             // stop refresh layout
             refresh?.post {
                 refresh!!.isRefreshing = false
             }
+
         })
 
+        // set request's tag
+        request.tag = TAG
         // add request to request queue
         queue!!.add(request)
 
@@ -214,6 +226,12 @@ class MainActivity : AppCompatActivity() {
         val date: Date = Date(year - 1900,month,day)
         val s = format.format(date)
         return s
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        queue!!.cancelAll(TAG)
     }
 
 }

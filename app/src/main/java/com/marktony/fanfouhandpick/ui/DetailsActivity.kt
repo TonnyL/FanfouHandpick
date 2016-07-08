@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
@@ -55,22 +56,30 @@ class DetailsActivity : AppCompatActivity() {
         if (!imgUrl.isNullOrEmpty()){
             imgUrl = imgUrl.replace("ff/m0/0c","ff/n0/0c")
             pbMain!!.visibility = View.VISIBLE
+
+            Glide.with(this).load(imgUrl).listener(object : RequestListener<String,GlideDrawable>{
+                override fun onException(e: Exception?, model: String?, target: Target<GlideDrawable>?, isFirstResource: Boolean): Boolean {
+                    pbMain!!.visibility = View.GONE
+
+                    val snackbar = Snackbar.make(avatar!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
+                    snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+                    val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
+                    textView.setTextColor(getColor(R.color.colorAccent))
+                    snackbar.show()
+
+                    return false
+                }
+
+                override fun onResourceReady(resource: GlideDrawable?, model: String?, target: Target<GlideDrawable>?, isFromMemoryCache: Boolean, isFirstResource: Boolean): Boolean {
+                    pbMain!!.visibility = View.GONE
+                    return false
+                }
+
+            }).into(ivMain)
+
         } else {
             pbMain!!.visibility = View.GONE
         }
-
-        Glide.with(this).load(imgUrl).listener(object : RequestListener<String,GlideDrawable>{
-            override fun onException(e: Exception?, model: String?, target: Target<GlideDrawable>?, isFirstResource: Boolean): Boolean {
-                pbMain!!.visibility = View.GONE
-                return false
-            }
-
-            override fun onResourceReady(resource: GlideDrawable?, model: String?, target: Target<GlideDrawable>?, isFromMemoryCache: Boolean, isFirstResource: Boolean): Boolean {
-                pbMain!!.visibility = View.GONE
-                return false
-            }
-
-        }).into(ivMain)
 
     }
 
@@ -94,6 +103,13 @@ class DetailsActivity : AppCompatActivity() {
             val manager: ClipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val data: ClipData = ClipData.newPlainText("text",content)
             manager.primaryClip = data
+
+            val snackbar = Snackbar.make(avatar!!,R.string.copy_to_clipboard_ok,Snackbar.LENGTH_SHORT)
+            snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+            val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
+            textView.setTextColor(getColor(R.color.colorAccent))
+            snackbar.show()
+
         }
         return true
     }
