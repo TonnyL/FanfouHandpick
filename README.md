@@ -20,6 +20,7 @@ Our app is now available on Google Play 谷歌商店:
 Scan the QR code 扫描二维码:
 
 ![fir.im](https://github.com/marktony/FanfouHandpick/blob/master/screenshots/download_link.png)
+
 [fir.im](http://fir.im/1nq6)
 
 ## Contact me 联系我
