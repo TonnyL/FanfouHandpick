@@ -4,11 +4,9 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v4.widget.SwipeRefreshLayout
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -22,16 +20,13 @@ import com.marktony.fanfouhandpick.R
 import com.marktony.fanfouhandpick.adapter.FanfouPostAdapter
 import com.marktony.fanfouhandpick.interfaze.OnRecyclerViewOnClickListener
 import com.marktony.fanfouhandpick.model.FanfouPost
+import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    // views
-    private var fab: FloatingActionButton? = null
-    private var refresh: SwipeRefreshLayout? = null
-    private var rvMain: RecyclerView? = null
     private var adapter: FanfouPostAdapter? = null
     private var postsList = ArrayList<FanfouPost>()
 
@@ -62,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         }
         loadData(parseDate(y,m,d).toString())
 
-        fab!!.setOnClickListener {
+        fab.setOnClickListener {
 
             val c = Calendar.getInstance()
 
@@ -92,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             dialog.show()
         }
 
-        refresh!!.setOnRefreshListener {
+        refresh.setOnRefreshListener {
 
             val c: Calendar = Calendar.getInstance()
             y = c.get(Calendar.YEAR)
@@ -128,14 +123,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initViews(){
-        fab = findViewById(R.id.fab) as FloatingActionButton
-        refresh = findViewById(R.id.refresh) as SwipeRefreshLayout
-        rvMain = findViewById(R.id.rv_main) as RecyclerView
-        rvMain!!.layoutManager = LinearLayoutManager(this)
+        rv_main.layoutManager = LinearLayoutManager(this)
         // set refresh button's color
-        refresh!!.setColorSchemeColors(resources.getColor(R.color.colorAccent))
+        refresh.setColorSchemeColors(resources.getColor(R.color.colorAccent))
         // set refresh button's size
-        refresh!!.setSize(SwipeRefreshLayout.DEFAULT)
+        refresh.setSize(SwipeRefreshLayout.DEFAULT)
     }
 
     fun loadData(date: String) {
@@ -171,7 +163,7 @@ class MainActivity : AppCompatActivity() {
             // init the adapter
             adapter = FanfouPostAdapter(this,postsList)
             // attach adapter to recycler view
-            rvMain!!.adapter = adapter
+            rv_main.adapter = adapter
             adapter!!.setItemClickListener(object : OnRecyclerViewOnClickListener{
                 override fun OnItemClick(v: View, position: Int) {
                     val intent = Intent(this@MainActivity,DetailsActivity::class.java)
