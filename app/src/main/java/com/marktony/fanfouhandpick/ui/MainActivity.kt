@@ -133,7 +133,7 @@ class MainActivity : AppCompatActivity() {
         rvMain = findViewById(R.id.rv_main) as RecyclerView
         rvMain!!.layoutManager = LinearLayoutManager(this)
         // set refresh button's color
-        refresh!!.setColorSchemeColors(getColor(R.color.colorAccent))
+        refresh!!.setColorSchemeColors(resources.getColor(R.color.colorAccent))
         // set refresh button's size
         refresh!!.setSize(SwipeRefreshLayout.DEFAULT)
     }
@@ -196,9 +196,9 @@ class MainActivity : AppCompatActivity() {
 
             // show error through snack bar
             val snackbar = Snackbar.make(fab!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
-            snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+            snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
             val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
-            textView.setTextColor(getColor(R.color.colorAccent))
+            textView.setTextColor(resources.getColor(R.color.colorAccent))
             snackbar.show()
 
             // stop refresh layout

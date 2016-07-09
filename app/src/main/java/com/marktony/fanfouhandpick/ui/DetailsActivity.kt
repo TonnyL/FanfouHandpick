@@ -62,9 +62,9 @@ class DetailsActivity : AppCompatActivity() {
                     pbMain!!.visibility = View.GONE
 
                     val snackbar = Snackbar.make(avatar!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
-                    snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+                    snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
                     val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
-                    textView.setTextColor(getColor(R.color.colorAccent))
+                    textView.setTextColor(resources.getColor(R.color.colorAccent))
                     snackbar.show()
 
                     return false
@@ -105,9 +105,9 @@ class DetailsActivity : AppCompatActivity() {
             manager.primaryClip = data
 
             val snackbar = Snackbar.make(avatar!!,R.string.copy_to_clipboard_ok,Snackbar.LENGTH_SHORT)
-            snackbar.view.setBackgroundColor(getColor(R.color.colorPrimary))
+            snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
             val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
-            textView.setTextColor(getColor(R.color.colorAccent))
+            textView.setTextColor(resources.getColor(R.color.colorAccent))
             snackbar.show()
 
         }
