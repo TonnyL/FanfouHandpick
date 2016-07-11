@@ -1,8 +1,8 @@
 ## FanfouHandpick 饭否精选
 
-FanfouHandpick's API comes from[Anthonyeef](https://github.com/Anthonyeef)'s repo [FanfouDaily](https://github.com/Anthonyeef/FanfouDaily),Thanks for him.
+FanfouHandpick's API comes from [Anthonyeef](https://github.com/Anthonyeef)'s repo [FanfouDaily](https://github.com/Anthonyeef/FanfouDaily),Thanks for him.
 
-饭否精选的API来自[Anthonyeef](https://github.com/Anthonyeef)的repo [FanfouDaily](https://github.com/Anthonyeef/FanfouDaily),在此向他表示感谢。
+饭否精选的API来自 [Anthonyeef](https://github.com/Anthonyeef) 的repo [FanfouDaily](https://github.com/Anthonyeef/FanfouDaily),在此向他表示感谢。
 
 ## Environment 环境
 This project is developed by **Kotlin**, if you used **Java** rather than Kotlin, you need to install the plugins and configure your environment before you compile it.

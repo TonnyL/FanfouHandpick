@@ -187,7 +187,7 @@ class MainActivity : AppCompatActivity() {
         }, Response.ErrorListener {
 
             // show error through snack bar
-            val snackbar = Snackbar.make(fab!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
+            val snackbar = Snackbar.make(fab,R.string.load_failed,Snackbar.LENGTH_SHORT)
             snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
             val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
             textView.setTextColor(resources.getColor(R.color.colorAccent))

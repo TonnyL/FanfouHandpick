@@ -50,7 +50,7 @@ class DetailsActivity : AppCompatActivity() {
                 override fun onException(e: Exception?, model: String?, target: Target<GlideDrawable>?, isFirstResource: Boolean): Boolean {
                     progress.visibility = View.GONE
 
-                    val snackbar = Snackbar.make(avatar!!,R.string.load_failed,Snackbar.LENGTH_SHORT)
+                    val snackbar = Snackbar.make(avatar,R.string.load_failed,Snackbar.LENGTH_SHORT)
                     snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
                     val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
                     textView.setTextColor(resources.getColor(R.color.colorAccent))
@@ -93,7 +93,7 @@ class DetailsActivity : AppCompatActivity() {
             val data: ClipData = ClipData.newPlainText("text",content)
             manager.primaryClip = data
 
-            val snackbar = Snackbar.make(avatar!!,R.string.copy_to_clipboard_ok,Snackbar.LENGTH_SHORT)
+            val snackbar = Snackbar.make(avatar,R.string.copy_to_clipboard_ok,Snackbar.LENGTH_SHORT)
             snackbar.view.setBackgroundColor(resources.getColor(R.color.colorPrimary))
             val textView: TextView = snackbar.view.findViewById(android.support.design.R.id.snackbar_text) as TextView
             textView.setTextColor(resources.getColor(R.color.colorAccent))
