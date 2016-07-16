@@ -5,7 +5,7 @@ FanfouHandpick's API comes from [Anthonyeef](https://github.com/Anthonyeef)'s re
 饭否精选的API来自 [Anthonyeef](https://github.com/Anthonyeef) 的repo [FanfouDaily](https://github.com/Anthonyeef/FanfouDaily),在此向他表示感谢。
 
 ## Environment 环境
-This project is developed by **Kotlin**, if you used **Java** rather than Kotlin, you need to install the plugins and configure your environment before you compile it.
+This project is developed by **Kotlin**, if you use **Java** rather than Kotlin, you need to install the plugins and configure your environment before you compile it.
 
 本项目采用 **Kotlin** 开发，如果你使用的是 **Java** 进行Android开发，那么，在编译次项目时，需要在Android Studio中安装插件，并进行相关的配置。
 
