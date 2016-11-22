@@ -137,8 +137,8 @@ class MainActivity : AppCompatActivity() {
 
             jsonObject ->
 
-            refresh?.post {
-                refresh!!.isRefreshing = true
+            refresh.post {
+                refresh.isRefreshing = true
             }
 
             // get the json array
@@ -166,6 +166,7 @@ class MainActivity : AppCompatActivity() {
             rv_main.adapter = adapter
             adapter!!.setItemClickListener(object : OnRecyclerViewOnClickListener{
                 override fun OnItemClick(v: View, position: Int) {
+
                     val intent = Intent(this@MainActivity,DetailsActivity::class.java)
                     val item = postsList[position]
 
@@ -180,8 +181,8 @@ class MainActivity : AppCompatActivity() {
             })
 
             // stop refresh layout
-            refresh?.post {
-                refresh!!.isRefreshing = false
+            refresh.post {
+                refresh.isRefreshing = false
             }
 
         }, Response.ErrorListener {
@@ -194,7 +195,7 @@ class MainActivity : AppCompatActivity() {
             snackbar.show()
 
             // stop refresh layout
-            refresh?.post {
+            refresh.post {
                 refresh!!.isRefreshing = false
             }
 

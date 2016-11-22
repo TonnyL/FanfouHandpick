@@ -28,6 +28,14 @@ Scan the QR code 扫描二维码:
 
 My blog 我的博客：[Blog](http://marktony.github.io/)
 
+## Support me 支持我的工作
+If you think, I deserve to get paid for my work, you can leave me a little money here.
+
+如果你认为我值得获得一定的报酬，请扫描下面的二维码向我捐赠。
+
+![Wechat_QRCode](https://github.com/marktony/FanfouHandpick/blob/master/screenshots/wechat_qrcode.png)
+
+
 ## License 许可证
 
     Copyright 2016 lizhaotailang
@@ -43,4 +51,3 @@ My blog 我的博客：[Blog](http://marktony.github.io/)
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
