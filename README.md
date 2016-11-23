@@ -24,10 +24,10 @@ Scan the QR code 扫描二维码:
 [fir.im](http://fir.im/1nq6)
 
 ## 我的其他项目
-+ [纸飞机](https://github.com/marktony/ZhiHuDaily) -- 采用MVP架构，集合了知乎日报、果壳精选和豆瓣一刻的综合性阅读客户端
-+ [知乎专栏](https://github.com/marktony/zhuanlan) -- 知乎专栏API分析 + 第三方知乎专栏Android客户端
-+ [饭否精选](https://github.com/marktony/FanfouHandpick) -- 使用Kotlin开发的饭否精选客户端
-+ [Reader](https://github.com/marktony/Reader) -- MVP + Volley + Gson, 内容包含了糗事百科，煎蛋和内涵段子
++ [Paper Plane 纸飞机](https://github.com/marktony/ZhiHuDaily) -- MVP Architecture, Including the Content of Zhihu Daily, Guokr Handpick and Douban Handpick 采用MVP架构，集合了知乎日报、果壳精选和豆瓣一刻的综合性阅读客户端
++ [Zhihu Zhuanlan 知乎专栏](https://github.com/marktony/zhuanlan) -- Analysis of Zhihu Zhuanlan's API + Unofficial Android App of Zhihu Zhuanlan 知乎专栏API分析 + 第三方知乎专栏Android客户端
++ [Translator 简单翻译](https://github.com/marktony/Translator) -- Android翻译App A translation app based on Android platform
++ [Reader](https://github.com/marktony/Reader) -- MVP + Volley + Gson, the content comes from Qiubai, Jiandan and Neihanduanzi  MVP + Volley + Gson, 内容包含了糗事百科，煎蛋和内涵段子
 
 ## Contact me 联系我
 marktonymengyi#gmail.com
